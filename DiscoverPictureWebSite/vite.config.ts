@@ -8,5 +8,11 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
-  }
+  },
+  server: {
+    // Servir les fichiers APK avec le bon MIME type
+    middlewareMode: false,
+  },
+  // Assurer que les fichiers APK sont copiés dans le build
+  publicDir: 'public',
 })

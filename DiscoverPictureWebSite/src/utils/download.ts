@@ -7,19 +7,32 @@ export interface DownloadOptions {
   onDownloadError?: (error: Error) => void;
 }
 
+// Obtenir le chemin de base correct
+const getBasePath = (): string => {
+  // En développement local
+  if (import.meta.env.DEV) {
+    return '';
+  }
+  // En production sur GitHub Pages
+  return '/discoverpicture-website';
+};
+
 export const downloadAPK = async (options: DownloadOptions): Promise<void> => {
   const { fileName, version = '1.0.0', onDownloadStart, onDownloadComplete, onDownloadError } = options;
   
   try {
     onDownloadStart?.();
     
-    // URL du fichier APK
-    const downloadUrl = `/downloads/${fileName}`;
+    // URL du fichier APK avec le bon chemin de base
+    const basePath = getBasePath();
+    const downloadUrl = `${basePath}/downloads/${fileName}`;
+    
+    console.log(`Tentative de téléchargement depuis: ${downloadUrl}`);
     
     // Vérifier si le fichier existe
     const response = await fetch(downloadUrl, { method: 'HEAD' });
     if (!response.ok) {
-      throw new Error(`Fichier non trouvé: ${fileName}`);
+      throw new Error(`Fichier non trouvé: ${fileName} (${response.status})`);
     }
     
     // Créer le lien de téléchargement
@@ -55,11 +68,15 @@ export const downloadAPK = async (options: DownloadOptions): Promise<void> => {
 // Fonction pour obtenir des informations sur le fichier
 export const getAPKInfo = async (fileName: string) => {
   try {
-    const response = await fetch(`/downloads/${fileName}`, { method: 'HEAD' });
+    const basePath = getBasePath();
+    const downloadUrl = `${basePath}/downloads/${fileName}`;
+    
+    console.log(`Vérification du fichier: ${downloadUrl}`);
+    
+    const response = await fetch(downloadUrl, { method: 'HEAD' });
     if (response.ok) {
       const contentLength = response.headers.get('content-length');
-      const lastModified = response.headers.get('last-modified');
-      
+      const lastModified = response.headers.get('last-modified');      
       return {
         exists: true,
         size: contentLength ? parseInt(contentLength) : null,
@@ -68,7 +85,8 @@ export const getAPKInfo = async (fileName: string) => {
       };
     }
     return { exists: false };
-  } catch {
+  } catch (error) {
+    console.error('Erreur lors de la vérification du fichier:', error);
     return { exists: false };
   }
 };
