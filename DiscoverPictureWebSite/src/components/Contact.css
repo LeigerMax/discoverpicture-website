@@ -3,14 +3,18 @@
 }
 
 .contact-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .contact-info {
-  max-width: 500px;
+  width: 100%;
+  max-width: 600px;
 }
 
 .contact-header {
@@ -66,6 +70,51 @@
 
 .contact-btn {
   width: 100%;
+}
+
+/* Section email de contact */
+.contact-email {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.contact-email h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.email-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: white;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  text-decoration: none;
+  padding: 0.875rem 2rem;
+  border-radius: var(--radius-lg);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-bottom: 1rem;
+  font-family: inherit;
+}
+
+.email-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
+}
+
+.contact-email p {
+  color: var(--text-secondary);
+  margin: 1rem 0 0 0;
+  line-height: 1.6;
 }
 
 /* Formulaire de contact */
@@ -189,35 +238,23 @@
 /* Responsive */
 @media (max-width: 968px) {
   .contact-content {
-    grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2rem;
+    padding: 0 1rem;
   }
   
   .contact-info {
     max-width: none;
   }
-  
-  .contact-header {
-    align-items: flex-start;
-    text-align: left;
-  }
-  
-  .contact-description {
-    text-align: left;
-  }
-  
-  .contact-details {
-    text-align: left;
-  }
 }
 
 @media (max-width: 768px) {
-  .contact-form {
+  .contact-email {
     padding: 1.5rem;
   }
   
-  .contact-details {
-    padding: 1.5rem;
+  .email-button {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
   }
   
   .dev-card {

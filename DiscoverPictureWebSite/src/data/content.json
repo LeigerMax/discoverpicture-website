@@ -149,7 +149,9 @@
       "description": "DiscoverPicture est née d'une envie simple : rendre le partage de souvenirs plus amusant et plus personnel. Nous croyons que chaque photo raconte une histoire et mérite d'être découverte de façon spéciale. Notre app transforme vos albums en véritables aventures à partager !",      "contact": {
         "title": "Une question ? Une idée ?",
         "email": "max.allemeersch@gmail.com",
-        "description": "Nous adorons avoir des nouvelles de nos utilisateurs ! Partagez-nous vos expériences, suggestions ou questions."
+        "description": "Nous adorons avoir des nouvelles de nos utilisateurs ! Partagez-nous vos expériences, suggestions ou questions.",
+        "directContactTitle": "Contact direct",
+        "buttonText": "Envoyer un email"
       }
     },
     "contact": {
@@ -465,7 +467,9 @@
       "description": "DiscoverPicture was born from a simple desire: to make sharing memories more fun and personal. We believe every photo tells a story and deserves to be discovered in a special way. Our app turns your albums into real adventures to share!",      "contact": {
         "title": "Got a question? An idea?",
         "email": "max.allemeersch@gmail.com",
-        "description": "We love hearing from our users! Share your experiences, suggestions, or questions with us."
+        "description": "We love hearing from our users! Share your experiences, suggestions, or questions with us.",
+        "directContactTitle": "Direct contact",
+        "buttonText": "Send an email"
       }
     },
     "contact": {
