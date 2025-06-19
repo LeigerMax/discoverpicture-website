@@ -9,11 +9,10 @@ interface DownloadProps {
 
 export default function DownloadComponent({ language }: DownloadProps) {
   const content = getCurrentLanguageContent(language);
-
   const handleDownloadAPK = () => {
     // En production, ceci serait le lien vers le vrai APK
     console.log('Téléchargement APK');
-    alert('Le téléchargement sera bientôt disponible !');
+    alert(content.download.alerts.downloadSoon);
   };
 
   return (
@@ -55,11 +54,9 @@ export default function DownloadComponent({ language }: DownloadProps) {
             >
               <Download size={20} />
               {content.download.android.button}
-            </button>
-
-            <div className="download-note">
-              <p>⚠️ Installation manuelle requise (APK)</p>
-              <p>📱 Autoriser les sources inconnues dans les paramètres</p>
+            </button>            <div className="download-note">
+              <p>⚠️ {content.download.notes.manualInstall}</p>
+              <p>📱 {content.download.notes.allowUnknown}</p>
             </div>
           </div>
 
@@ -80,43 +77,38 @@ export default function DownloadComponent({ language }: DownloadProps) {
               <div className="status-badge">
                 <span>{content.download.ios.status}</span>
               </div>
-            </div>
-
-            <button 
+            </div>            <button 
               className="btn btn-secondary btn-large download-platform-btn"
               disabled
             >
               <Clock size={20} />
-              Bientôt disponible
+              {content.download.notes.comingSoon}
             </button>
 
             <div className="download-note">
-              <p>🍎 En cours de soumission à l'App Store</p>
-              <p>📧 Inscrivez-vous pour être notifié</p>
+              <p>🍎 {content.download.notes.appStoreSubmission}</p>
+              <p>📧 {content.download.notes.notifyMe}</p>
             </div>
           </div>
         </div>
 
-        {/* Informations supplémentaires */}
-        <div className="download-extra fade-in">
+        {/* Informations supplémentaires */}        <div className="download-extra fade-in">
           <div className="extra-info">
-            <h4>📋 Instructions d'installation</h4>
-            <ol>
-              <li>Téléchargez le fichier APK</li>
-              <li>Autorisez l'installation depuis des sources inconnues</li>
-              <li>Ouvrez le fichier APK téléchargé</li>
-              <li>Suivez les instructions d'installation</li>
+            <h4>📋 {content.download.instructions.title}</h4>            <ol>
+              {content.download.instructions.steps.map((step) => (
+                <li key={step}>{step}</li>
+              ))}
             </ol>
           </div>
 
           <div className="extra-info">
-            <h4>🔄 Mises à jour</h4>
-            <p>L'application vérifie automatiquement les mises à jour au démarrage. Vous serez notifié dès qu'une nouvelle version sera disponible.</p>
+            <h4>🔄 {content.download.updates.title}</h4>
+            <p>{content.download.updates.description}</p>
           </div>
 
           <div className="extra-info">
-            <h4>🆘 Besoin d'aide ?</h4>
-            <p>Consultez notre FAQ ou contactez-nous directement pour toute question sur l'installation.</p>
+            <h4>🆘 {content.download.help.title}</h4>
+            <p>{content.download.help.description}</p>
           </div>
         </div>
       </div>

@@ -25,63 +25,62 @@ export default function Contact({ language }: ContactProps) {
           </div>
 
           <div className="contact-form-container scale-in">
-            <div className="contact-form">
-              <h3>
+            <div className="contact-form">              <h3>
                 <MessageCircle size={24} />
-                Envoyez-nous un message
+                {content.contact.form.title}
               </h3>
               
               <form className="message-form" onSubmit={(e) => {
                 e.preventDefault();
-                alert('Formulaire de contact bientôt disponible ! Utilisez l\'email pour le moment.');
+                alert(content.contact.form.alertMessage);
               }}>
                 <div className="form-group">
-                  <label htmlFor="name">Nom</label>
+                  <label htmlFor="name">{content.contact.form.name}</label>
                   <input
                     type="text"
                     id="name"
                     name="name"
                     required
-                    placeholder="Votre nom complet"
+                    placeholder={content.contact.form.namePlaceholder}
                   />
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="email">Email</label>
+                  <label htmlFor="email">{content.contact.form.email}</label>
                   <input
                     type="email"
                     id="email"
                     name="email"
                     required
-                    placeholder="votre@email.com"
+                    placeholder={content.contact.form.emailPlaceholder}
                   />
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="subject">Sujet</label>
+                  <label htmlFor="subject">{content.contact.form.subject}</label>
                   <select id="subject" name="subject" required>
-                    <option value="">Choisissez un sujet</option>
-                    <option value="bug">Signaler un bug</option>
-                    <option value="feature">Suggestion de fonctionnalité</option>
-                    <option value="help">Demande d'aide</option>
-                    <option value="other">Autre</option>
+                    <option value="">{content.contact.form.subjectPlaceholder}</option>
+                    <option value="bug">{content.contact.form.subjectOptions.bug}</option>
+                    <option value="feature">{content.contact.form.subjectOptions.feature}</option>
+                    <option value="help">{content.contact.form.subjectOptions.help}</option>
+                    <option value="other">{content.contact.form.subjectOptions.other}</option>
                   </select>
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="message">Message</label>
+                  <label htmlFor="message">{content.contact.form.message}</label>
                   <textarea
                     id="message"
                     name="message"
                     rows={5}
                     required
-                    placeholder="Décrivez votre demande ou question..."
+                    placeholder={content.contact.form.messagePlaceholder}
                   ></textarea>
                 </div>
 
                 <button type="submit" className="btn btn-primary btn-large">
                   <Send size={20} />
-                  Envoyer le message
+                  {content.contact.form.sendButton}
                 </button>
               </form>
             </div>
@@ -93,10 +92,9 @@ export default function Contact({ language }: ContactProps) {
           <div className="dev-card">
             <div className="dev-avatar">
               <User size={32} />
-            </div>
-            <div className="dev-details">
-              <h4>Développeur</h4>
-              <p>DiscoverPicture est développé avec passion pour révolutionner le partage de photos. Cette application combine sécurité, innovation et simplicité d'utilisation.</p>
+            </div>            <div className="dev-details">
+              <h4>{content.contact.developer.title}</h4>
+              <p>{content.contact.developer.description}</p>
             </div>
           </div>
         </div>

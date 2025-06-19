@@ -51,7 +51,7 @@ export default function Navigation({ language, onLanguageChange }: NavigationPro
             <button
               onClick={() => handleNavClick('hero')}
               className="logo-button"
-              aria-label="Retour à l'accueil"
+              aria-label={content.nav.homeAriaLabel}
             >
               <img src={logoTransparent} alt="DiscoverPicture" className="nav-logo-img" />
               <span className="logo-text">DiscoverPicture</span>
@@ -77,7 +77,7 @@ export default function Navigation({ language, onLanguageChange }: NavigationPro
             <button
               onClick={toggleLanguage}
               className="language-toggle"
-              aria-label={`Changer vers ${language === 'fr' ? 'English' : 'Français'}`}
+              aria-label={`${content.nav.languageToggleAriaLabel} ${language === 'fr' ? 'English' : 'Français'}`}
             >
               <Globe size={20} />
               <span>{language.toUpperCase()}</span>
@@ -87,7 +87,7 @@ export default function Navigation({ language, onLanguageChange }: NavigationPro
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="menu-toggle mobile"
-              aria-label="Toggle menu"
+              aria-label={content.nav.toggleMenuAriaLabel}
               aria-expanded={isMenuOpen}
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}

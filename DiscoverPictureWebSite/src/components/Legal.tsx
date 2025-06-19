@@ -73,12 +73,8 @@ export default function Legal({ language, type, onBack }: LegalProps) {
             </div>
           )}
 
-          <div className="legal-footer">
-            <p>
-              {language === 'fr' 
-                ? 'Pour toute question concernant ces documents légaux, veuillez nous contacter.'
-                : 'For any questions regarding these legal documents, please contact us.'
-              }
+          <div className="legal-footer">            <p>
+              {content.legal.footer.contactMessage}
             </p>
             <p className="contact-email">
               <a href={`mailto:${content.about.contact.email}`}>

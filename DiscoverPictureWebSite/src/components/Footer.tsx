@@ -14,12 +14,11 @@ export default function Footer({ language, onShowLegal }: FooterProps) {
   const handleGithubClick = () => {
     window.open('https://github.com/LeigerMax/DiscoverPicture', '_blank', 'noopener,noreferrer');
   };
-
   const handlePrivacyClick = () => {
     if (onShowLegal) {
       onShowLegal('privacy');
     } else {
-      alert('Politique de confidentialité - À implémenter');
+      alert(content.footer.alerts.privacyNotImplemented);
     }
   };
 
@@ -27,7 +26,7 @@ export default function Footer({ language, onShowLegal }: FooterProps) {
     if (onShowLegal) {
       onShowLegal('terms');
     } else {
-      alert('Conditions d\'utilisation - À implémenter');
+      alert(content.footer.alerts.termsNotImplemented);
     }
   };
 
@@ -40,35 +39,33 @@ export default function Footer({ language, onShowLegal }: FooterProps) {
               <div className="footer-logo">
                 <img src={logoTransparent} alt="DiscoverPicture" className="footer-logo-img" />
                 <span>DiscoverPicture</span>
-              </div>
-              <p className="footer-tagline">
-                Transformez vos souvenirs en aventures
+              </div>              <p className="footer-tagline">
+                {content.footer.tagline}
               </p>
             </div>
 
             {/* Liens principaux */}
-            <div className="footer-links">
-              <div className="footer-section">
-                <h4>Application</h4>
+            <div className="footer-links">              <div className="footer-section">
+                <h4>{content.footer.sections.app.title}</h4>
                 <ul>
-                  <li><a href="#features">Fonctionnalités</a></li>
-                  <li><a href="#security">Sécurité</a></li>
-                  <li><a href="#download">Télécharger</a></li>
-                  <li><a href="#faq">FAQ</a></li>
+                  <li><a href="#features">{content.footer.sections.app.features}</a></li>
+                  <li><a href="#security">{content.footer.sections.app.security}</a></li>
+                  <li><a href="#download">{content.footer.sections.app.download}</a></li>
+                  <li><a href="#faq">{content.footer.sections.app.faq}</a></li>
                 </ul>
               </div>
 
               <div className="footer-section">
-                <h4>Support</h4>
+                <h4>{content.footer.sections.support.title}</h4>
                 <ul>
-                  <li><a href="#contact">Contact</a></li>
-                  <li><a href="#faq">Questions fréquentes</a></li>
-                  <li><a href="mailto:support@discoverpicture.app">Support technique</a></li>
+                  <li><a href="#contact">{content.footer.sections.support.contact}</a></li>
+                  <li><a href="#faq">{content.footer.sections.support.faq}</a></li>
+                  <li><a href="mailto:support@discoverpicture.app">{content.footer.sections.support.technicalSupport}</a></li>
                 </ul>
               </div>
 
               <div className="footer-section">
-                <h4>Légal</h4>
+                <h4>{content.footer.sections.legal.title}</h4>
                 <ul>
                   <li>
                     <button onClick={handlePrivacyClick} className="footer-link-btn">
@@ -83,10 +80,8 @@ export default function Footer({ language, onShowLegal }: FooterProps) {
                     </button>
                   </li>
                 </ul>
-              </div>
-
-              <div className="footer-section">
-                <h4>Développement</h4>
+              </div>              <div className="footer-section">
+                <h4>{content.footer.sections.development.title}</h4>
                 <ul>                  <li>
                     <button onClick={handleGithubClick} className="footer-link-btn">
                       <span className="github-icon">⚡</span>
@@ -110,20 +105,19 @@ export default function Footer({ language, onShowLegal }: FooterProps) {
               <p>{content.footer.copyright}</p>
             </div>
             
-            <div className="footer-badges">
-              <div className="badge android-badge">
+            <div className="footer-badges">              <div className="badge android-badge">
                 <span>📱</span>
                 <div>
-                  <small>Disponible sur</small>
-                  <strong>Android</strong>
+                  <small>{content.footer.badges.availableOn}</small>
+                  <strong>{content.footer.badges.android}</strong>
                 </div>
               </div>
               
               <div className="badge ios-badge coming-soon">
                 <span>🍎</span>
                 <div>
-                  <small>Bientôt sur</small>
-                  <strong>iOS</strong>
+                  <small>{content.footer.badges.comingSoonOn}</small>
+                  <strong>{content.footer.badges.ios}</strong>
                 </div>
               </div>
             </div>

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
+import { getCurrentLanguageContent } from '../utils/content';
 import type { Language } from '../utils/content';
 
 // Import des captures d'écran
@@ -15,38 +16,34 @@ interface ScreenshotsProps {
 }
 
 export default function Screenshots({ language }: ScreenshotsProps) {
+  console.log('Screenshots component rendering with language:', language);
   const [selectedImage, setSelectedImage] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  
+  console.log('Screenshots component rendering with language:', language);
+  const content = getCurrentLanguageContent(language);
 
   // Configuration des captures d'écran avec descriptions
   const screenshots = [
     {
       src: screenAccueil,
-      title: language === 'fr' ? 'Accueil' : 'Home',
-      description: language === 'fr' 
-        ? 'Interface principale avec la liste de vos albums et le bouton pour scanner des QR codes'
-        : 'Main interface with your album list and QR code scanner button'
+      title: content.screenshots.items[0].title,
+      description: content.screenshots.items[0].description
     },
     {
       src: screenCreerAlbum,
-      title: language === 'fr' ? 'Créer un album' : 'Create album',
-      description: language === 'fr'
-        ? 'Créez facilement un nouvel album en ajoutant vos photos favorites'
-        : 'Easily create a new album by adding your favorite photos'
+      title: content.screenshots.items[1].title,
+      description: content.screenshots.items[1].description
     },
     {
       src: screenAlbum,
-      title: language === 'fr' ? 'Album déverrouillé' : 'Unlocked album',
-      description: language === 'fr'
-        ? 'Visualisez vos photos une fois déverrouillées avec les QR codes correspondants'
-        : 'View your photos once unlocked with the corresponding QR codes'
+      title: content.screenshots.items[2].title,
+      description: content.screenshots.items[2].description
     },
     {
       src: screenAlbumBloque,
-      title: language === 'fr' ? 'Album verrouillé' : 'Locked album',
-      description: language === 'fr'
-        ? 'Les photos restent protégées jusqu\'à ce que vous scanniez le bon QR code'
-        : 'Photos remain protected until you scan the right QR code'
+      title: content.screenshots.items[3].title,
+      description: content.screenshots.items[3].description
     }
   ];
 
@@ -62,29 +59,17 @@ export default function Screenshots({ language }: ScreenshotsProps) {
   const previousImage = () => {
     setSelectedImage(selectedImage > 0 ? selectedImage - 1 : screenshots.length - 1);
   };
-
   const nextImage = () => {
     setSelectedImage(selectedImage < screenshots.length - 1 ? selectedImage + 1 : 0);
   };
-
-  const sectionContent = {
-    fr: {
-      title: "L'application en images",
-      subtitle: "Découvrez l'interface intuitive de DiscoverPicture"
-    },
-    en: {
-      title: "App Screenshots",
-      subtitle: "Discover DiscoverPicture's intuitive interface"
-    }
-  };
-
   return (
     <section id="screenshots" className="screenshots section">
-      <div className="container">
-        <div className="section-header text-center fade-in">
-          <h2>{sectionContent[language].title}</h2>
-          <p className="section-subtitle">{sectionContent[language].subtitle}</p>
-        </div>        <div className="screenshots-grid">
+      <div className="container">        <div className="section-header text-center fade-in">
+          <h2>{content.screenshots.title}</h2>
+          <p className="section-subtitle">{content.screenshots.subtitle}</p>
+        </div>
+        
+        <div className="screenshots-grid">
           {screenshots.map((screenshot, index) => (
             <button 
               key={`screenshot-${screenshot.title}-${index}`}
@@ -164,7 +149,7 @@ export default function Screenshots({ language }: ScreenshotsProps) {
                     className={`indicator ${index === selectedImage ? 'active' : ''}`}
                     onClick={() => setSelectedImage(index)}
                     type="button"
-                    aria-label={`Voir ${screenshot.title}`}
+                    aria-label={`${content.screenshots.modal.viewLabel} ${screenshot.title}`}
                   />
                 ))}
               </div>
