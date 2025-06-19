@@ -1,5 +1,7 @@
 import { Download, Smartphone, Apple, Clock, FileText } from 'lucide-react';
+import { useState, useEffect } from 'react';
 import { getCurrentLanguageContent } from '../utils/content';
+import { downloadAPK, getAPKInfo } from '../utils/download';
 import type { Language } from '../utils/content';
 import './Download.css';
 
@@ -9,10 +11,57 @@ interface DownloadProps {
 
 export default function DownloadComponent({ language }: DownloadProps) {
   const content = getCurrentLanguageContent(language);
-  const handleDownloadAPK = () => {
-    // En production, ceci serait le lien vers le vrai APK
-    console.log('Téléchargement APK');
-    alert(content.download.alerts.downloadSoon);
+  const [downloadStatus, setDownloadStatus] = useState<'idle' | 'downloading' | 'success' | 'error'>('idle');
+  const [apkInfo, setApkInfo] = useState<{ exists: boolean; sizeFormatted?: string | null }>({ exists: false });
+
+  // Vérifier l'existence du fichier APK au chargement
+  useEffect(() => {
+    const checkAPK = async () => {
+      const info = await getAPKInfo('DiscoverPicture.apk');
+      setApkInfo(info);
+    };
+    checkAPK();
+  }, []);
+
+  // Fonctions utilitaires pour simplifier le JSX
+  const getButtonClass = () => {
+    if (downloadStatus === 'success') return 'btn btn-success btn-large download-platform-btn';
+    if (downloadStatus === 'error') return 'btn btn-danger btn-large download-platform-btn';
+    return 'btn btn-primary btn-large download-platform-btn';
+  };
+
+  const getButtonText = () => {
+    if (downloadStatus === 'downloading') {
+      return language === 'fr' ? 'Téléchargement...' : 'Downloading...';
+    }
+    if (downloadStatus === 'success') {
+      return language === 'fr' ? 'Téléchargé !' : 'Downloaded!';
+    }
+    if (downloadStatus === 'error') {
+      return language === 'fr' ? 'Erreur' : 'Error';
+    }
+    return content.download.android.button;
+  };
+
+  const handleDownloadAPK = async () => {
+    setDownloadStatus('downloading');
+    
+    await downloadAPK({
+      fileName: 'DiscoverPicture.apk',
+      version: '1.0.0',
+      onDownloadStart: () => {
+        console.log('Début du téléchargement...');
+      },
+      onDownloadComplete: () => {
+        setDownloadStatus('success');
+        setTimeout(() => setDownloadStatus('idle'), 3000);
+      },
+      onDownloadError: (error) => {
+        console.error('Erreur de téléchargement:', error);
+        setDownloadStatus('error');
+        setTimeout(() => setDownloadStatus('idle'), 3000);
+      }
+    });
   };
 
   return (
@@ -37,24 +86,22 @@ export default function DownloadComponent({ language }: DownloadProps) {
               <div className="info-item">
                 <FileText size={16} />
                 <span>{content.download.android.description}</span>
-              </div>
-              <div className="info-item">
+              </div>              <div className="info-item">
                 <Download size={16} />
-                <span>{content.download.android.size}</span>
+                <span>{apkInfo.sizeFormatted ?? content.download.android.size}</span>
               </div>
               <div className="info-item">
                 <Smartphone size={16} />
                 <span>{content.download.android.requirements}</span>
               </div>
-            </div>
-
-            <button 
+            </div>            <button 
               onClick={handleDownloadAPK}
-              className="btn btn-primary btn-large download-platform-btn"
+              className={getButtonClass()}
+              disabled={downloadStatus === 'downloading' || !apkInfo.exists}
             >
               <Download size={20} />
-              {content.download.android.button}
-            </button>            <div className="download-note">
+              {getButtonText()}
+            </button><div className="download-note">
               <p>⚠️ {content.download.notes.manualInstall}</p>
               <p>📱 {content.download.notes.allowUnknown}</p>
             </div>

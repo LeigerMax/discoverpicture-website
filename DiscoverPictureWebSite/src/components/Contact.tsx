@@ -1,4 +1,5 @@
-import { User, Mail } from 'lucide-react';
+import { User, Mail, Copy } from 'lucide-react';
+import { useState } from 'react';
 import { getCurrentLanguageContent } from '../utils/content';
 import type { Language } from '../utils/content';
 import './Contact.css';
@@ -9,6 +10,26 @@ interface ContactProps {
 
 export default function Contact({ language }: ContactProps) {
   const content = getCurrentLanguageContent(language);
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(content.about.contact.email);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      // Fallback pour les navigateurs plus anciens
+      console.log('Impossible de copier automatiquement');
+    }
+  };  let copyButtonTitle, copyButtonText;
+  
+  if (copied) {
+    copyButtonTitle = language === 'fr' ? 'Copié !' : 'Copied!';
+    copyButtonText = language === 'fr' ? 'Copié !' : 'Copied!';
+  } else {
+    copyButtonTitle = language === 'fr' ? 'Copier l\'email' : 'Copy email';
+    copyButtonText = language === 'fr' ? 'Copier' : 'Copy';
+  }
 
   return (
     <section id="contact" className="contact section">
@@ -22,13 +43,22 @@ export default function Contact({ language }: ContactProps) {
               {content.about.description}
             </p>              <div className="contact-email">
               <h3>{content.about.contact.directContactTitle}</h3>
-              <button 
-                onClick={() => window.location.href = `mailto:${content.about.contact.email}`}
-                className="email-button"
-              >
-                <Mail size={20} />
-                {content.about.contact.buttonText}
-              </button>
+              <div className="contact-buttons">
+                <button 
+                  onClick={() => window.location.href = `mailto:${content.about.contact.email}`}
+                  className="email-button primary"
+                >
+                  <Mail size={20} />
+                  {content.about.contact.buttonText}
+                </button>                <button 
+                  onClick={handleCopyEmail}
+                  className="email-button secondary"
+                  title={copyButtonTitle}
+                >
+                  <Copy size={20} />
+                  {copyButtonText}
+                </button>
+              </div>
               <p>{content.about.contact.description}</p>
             </div>
           </div>

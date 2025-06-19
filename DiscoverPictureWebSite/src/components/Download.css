@@ -131,7 +131,44 @@
 
 .download-platform-btn:disabled:hover {
   transform: none;
-  box-shadow: var(--shadow-md);
+  box-shadow: none;
+}
+
+/* États du bouton de téléchargement */
+.btn-success {
+  background: linear-gradient(135deg, #10b981, #059669);
+  border-color: #059669;
+  color: white;
+}
+
+.btn-success:hover {
+  background: linear-gradient(135deg, #059669, #047857);
+  border-color: #047857;
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  border-color: #dc2626;
+  color: white;
+}
+
+.btn-danger:hover {
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+  border-color: #b91c1c;
+}
+
+/* Animation de téléchargement */
+.download-platform-btn[disabled] .lucide {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .download-note {
