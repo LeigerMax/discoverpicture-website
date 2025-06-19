@@ -1,0 +1,638 @@
+{
+  "fr": {    "nav": {
+      "features": "Fonctionnalités",
+      "screenshots": "Captures d'écran",
+      "security": "Sécurité",
+      "download": "Télécharger",
+      "faq": "FAQ",
+      "contact": "Contact",
+      "homeAriaLabel": "Retour à l'accueil",
+      "languageToggleAriaLabel": "Changer vers",
+      "toggleMenuAriaLabel": "Basculer le menu"
+    },"hero": {
+      "title": "DiscoverPicture – Partagez vos souvenirs en mode chasse au trésor",
+      "subtitle": "Transformez le partage de photos en une expérience ludique et sécurisée ! Chaque photo se déverrouille avec son QR code secret.",
+      "downloadButton": "Télécharger l'app",
+      "availableOn": "Disponible sur Android et iOS (bientôt)"
+    },    "features": {
+      "title": "Pourquoi choisir DiscoverPicture ?",
+      "subtitle": "Une expérience unique pour partager vos plus beaux souvenirs",
+      "items": [
+        {
+          "title": "Créez vos chasses au trésor",
+          "description": "Transformez chaque photo en énigme ! Parfait pour les jeux familiaux, anniversaires et événements spéciaux."
+        },
+        {
+          "title": "Partage sécurisé et amusant",
+          "description": "Vos photos restent protégées jusqu'à ce que la bonne personne scanne le bon QR code. Comme un coffre-fort numérique !"
+        },
+        {
+          "title": "Aucune connexion requise",
+          "description": "Partagez vos QR codes par tous les moyens : impression, message, email... Pas besoin d'internet pour profiter de l'expérience."
+        },
+        {
+          "title": "Vos souvenirs, vos règles",
+          "description": "Décidez qui peut voir quoi et quand. Chaque photo a son propre code secret que vous contrôlez."
+        },
+        {
+          "title": "Protection de vos moments privés",
+          "description": "Vos photos ne peuvent pas être copiées ou partagées sans votre permission. Vos souvenirs restent vraiment vôtres."
+        },        {
+          "title": "Simple et intuitif",
+          "description": "Interface claire en français et anglais. Créez votre premier album en quelques minutes seulement."
+        }
+      ]
+    },    "screenshots": {
+      "title": "Découvrez l'interface",
+      "subtitle": "Explorez l'interface intuitive de DiscoverPicture",
+      "items": [
+        {
+          "title": "Accueil",
+          "description": "Interface principale avec la liste de vos albums et le bouton pour scanner des QR codes"
+        },
+        {
+          "title": "Créer un album",
+          "description": "Créez facilement un nouvel album en ajoutant vos photos favorites"
+        },
+        {
+          "title": "Album déverrouillé",
+          "description": "Visualisez vos photos une fois déverrouillées avec les QR codes correspondants"
+        },
+        {
+          "title": "Album verrouillé",
+          "description": "Les photos restent protégées jusqu'à ce que vous scanniez le bon QR code"
+        }
+      ],
+      "modal": {
+        "viewLabel": "Voir"
+      }
+    },
+    "security": {
+      "title": "Vos souvenirs en toute sécurité",
+      "subtitle": "Partagez l'esprit tranquille",
+      "description": "DiscoverPicture protège naturellement vos photos personnelles. Tout reste sur votre téléphone, rien ne part sur internet. Seules les personnes avec vos QR codes peuvent découvrir vos photos, exactement comme vous le souhaitez.",
+      "features": [
+        "Vos photos restent sur votre téléphone",
+        "Aucun stockage en ligne",
+        "Protection contre les copies d'écran",
+        "Contrôle total de vos partages",
+        "Application transparente et fiable"
+      ]    },    "download": {
+      "title": "Télécharger l'application",
+      "subtitle": "Commencez votre aventure photo dès maintenant",      "android": {
+        "title": "Android",
+        "description": "Version actuelle : 1.0.0",
+        "size": "34.5 MB",
+        "requirements": "Android 5.0 à la plus récente",
+        "button": "Télécharger APK"
+      },
+      "ios": {
+        "title": "iOS",
+        "description": "Version actuelle : 1.0.0",
+        "size": "25-30 MB (estimation)",
+        "requirements": "iOS 12.0 à la plus récente",
+        "status": "Bientôt disponible sur l'App Store"
+      },
+      "notes": {
+        "manualInstall": "Installation manuelle requise (APK)",
+        "allowUnknown": "Autoriser les sources inconnues dans les paramètres",
+        "appStoreSubmission": "En cours de soumission à l'App Store",
+        "notifyMe": "Inscrivez-vous pour être notifié",
+        "comingSoon": "Bientôt disponible"
+      },
+      "instructions": {
+        "title": "Instructions d'installation",
+        "steps": [
+          "Téléchargez le fichier APK",
+          "Autorisez l'installation depuis des sources inconnues",
+          "Ouvrez le fichier APK téléchargé",
+          "Suivez les instructions d'installation"
+        ]
+      },
+      "updates": {
+        "title": "Mises à jour",
+        "description": "L'application vérifie automatiquement les mises à jour au démarrage. Vous serez notifié dès qu'une nouvelle version sera disponible."
+      },
+      "help": {
+        "title": "Besoin d'aide ?",
+        "description": "Consultez notre FAQ ou contactez-nous directement pour toute question sur l'installation."
+      },
+      "alerts": {
+        "downloadSoon": "Le téléchargement sera bientôt disponible !"
+      }
+    },"faq": {
+      "title": "Questions fréquentes",
+      "items": [
+        {
+          "question": "Comment ça marche concrètement ?",
+          "answer": "C'est simple ! Créez un album avec vos photos, puis partagez les QR codes générés. Chaque personne scanne le code pour découvrir sa photo surprise. Parfait pour des événements, des cadeaux ou des jeux en famille."
+        },
+        {
+          "question": "Que se passe-t-il si je perds un QR code ?",
+          "answer": "Aucun souci ! Vous pouvez toujours voir et partager à nouveau vos QR codes depuis l'application. Vous gardez toujours le contrôle sur vos albums."
+        },
+        {
+          "question": "Mes photos sont-elles vraiment privées ?",
+          "answer": "Absolument ! Vos photos restent uniquement sur votre téléphone. Seules les personnes avec les bons QR codes peuvent découvrir les photos que vous avez choisies de partager."
+        },
+        {
+          "question": "Ai-je besoin d'internet pour utiliser l'app ?",
+          "answer": "Non, pas du tout ! DiscoverPicture fonctionne entièrement hors ligne. Vous pouvez créer vos albums, scanner des codes et découvrir des photos même sans connexion."
+        },
+        {
+          "question": "Pour quelles occasions utiliser DiscoverPicture ?",
+          "answer": "Les possibilités sont infinies ! Mariages, anniversaires, vacances en famille, chasses au trésor, cadeaux personnalisés, événements d'entreprise... Partout où vous voulez créer de la surprise et du partage."
+        }
+      ]
+    },    "about": {
+      "title": "Notre mission",
+      "description": "DiscoverPicture est née d'une envie simple : rendre le partage de souvenirs plus amusant et plus personnel. Nous croyons que chaque photo raconte une histoire et mérite d'être découverte de façon spéciale. Notre app transforme vos albums en véritables aventures à partager !",      "contact": {
+        "title": "Une question ? Une idée ?",
+        "email": "max.allemeersch@gmail.com",
+        "description": "Nous adorons avoir des nouvelles de nos utilisateurs ! Partagez-nous vos expériences, suggestions ou questions.",
+        "directContactTitle": "Contact direct",
+        "buttonText": "Envoyer un email"
+      }
+    },
+    "contact": {
+      "form": {
+        "title": "Envoyez-nous un message",
+        "name": "Nom",
+        "namePlaceholder": "Votre nom complet",
+        "email": "Email",
+        "emailPlaceholder": "votre@email.com",
+        "subject": "Sujet",
+        "subjectPlaceholder": "Choisissez un sujet",
+        "subjectOptions": {
+          "bug": "Signaler un bug",
+          "feature": "Suggestion de fonctionnalité",
+          "help": "Demande d'aide",
+          "other": "Autre"
+        },
+        "message": "Message",
+        "messagePlaceholder": "Décrivez votre demande ou question...",
+        "sendButton": "Envoyer le message",
+        "alertMessage": "Formulaire de contact bientôt disponible ! Utilisez l'email pour le moment."
+      },
+      "developer": {
+        "title": "Développeur",
+        "description": "DiscoverPicture est développé avec passion pour révolutionner le partage de photos. Cette application combine sécurité, innovation et simplicité d'utilisation."
+      }
+    },    "footer": {
+      "copyright": "© 2025 DiscoverPicture. Tous droits réservés.",
+      "version": "Version 1.0.0",
+      "tagline": "Transformez vos souvenirs en aventures",
+      "links": {
+        "github": "Code source",
+        "privacy": "Politique de confidentialité",
+        "terms": "Conditions d'utilisation"
+      },
+      "sections": {
+        "app": {
+          "title": "Application",
+          "features": "Fonctionnalités",
+          "security": "Sécurité",
+          "download": "Télécharger",
+          "faq": "FAQ"
+        },
+        "support": {
+          "title": "Support",
+          "contact": "Contact",
+          "faq": "Questions fréquentes",
+          "technicalSupport": "Support technique"
+        },
+        "legal": {
+          "title": "Légal"
+        },
+        "development": {
+          "title": "Développement"
+        }
+      },
+      "badges": {
+        "availableOn": "Disponible sur",
+        "comingSoonOn": "Bientôt sur",
+        "android": "Android",
+        "ios": "iOS"
+      },
+      "alerts": {
+        "privacyNotImplemented": "Politique de confidentialité - À implémenter",
+        "termsNotImplemented": "Conditions d'utilisation - À implémenter"
+      }
+    },    "legal": {
+      "terms": {
+        "title": "Conditions d'Utilisation - DiscoverPicture",
+        "lastUpdated": "Dernière mise à jour : 19 juin 2025",
+        "version": "Version : 1.0.0",
+        "sections": [
+          {
+            "title": "1. Acceptation",
+            "content": "En utilisant l'application DiscoverPicture, vous acceptez les présentes conditions d'utilisation. Si vous n'êtes pas d'accord, veuillez ne pas utiliser l'application."
+          },
+          {
+            "title": "2. Fonctionnement général",
+            "content": "DiscoverPicture est une application mobile conçue pour partager des photos de manière privée et ludique. Chaque photo est chiffrée et déverrouillable uniquement via un QR code spécifique. L'application fonctionne sans connexion Internet. Toutes les données sont stockées localement sur l'appareil."
+          },
+          {
+            "title": "3. Responsabilité de l'utilisateur",
+            "content": "Vous êtes seul responsable du contenu que vous importez, créez ou partagez avec d'autres utilisateurs via des QR codes. L'application ne peut pas restaurer des données perdues ni interférer avec des échanges entre utilisateurs."
+          },
+          {
+            "title": "4. Limitations techniques",
+            "content": "Si vous supprimez ou réinstallez l'application, les données locales peuvent être perdues. La protection contre les captures d'écran est active, mais ne garantit pas une sécurité absolue."
+          },
+          {
+            "title": "5. Propriété intellectuelle",
+            "content": "L'application, son nom, son logo et son interface sont protégés par le droit d'auteur. Vous ne pouvez pas copier, modifier ou redistribuer l'application sans autorisation."
+          },
+          {
+            "title": "6. Modifications",
+            "content": "Les conditions peuvent être mises à jour à tout moment. La version la plus récente sera disponible dans l'application."
+          }
+        ]
+      },
+      "privacy": {
+        "title": "Politique de Confidentialité - DiscoverPicture",
+        "lastUpdated": "Dernière mise à jour : 19 juin 2025",
+        "version": "Version : 1.0.0",
+        "sections": [
+          {
+            "title": "1. Collecte de données",
+            "content": "DiscoverPicture ne collecte aucune donnée personnelle. L'application fonctionne entièrement hors-ligne. Aucune information ne quitte votre appareil."
+          },
+          {
+            "title": "2. Données stockées localement",
+            "content": "L'application stocke uniquement : vos albums, photos et QR codes, ainsi que vos préférences (langue, thème, etc.). Toutes les données sont chiffrées localement via une méthode de chiffrement léger."
+          },
+          {
+            "title": "3. Partage de données",
+            "content": "Vous seul(e) contrôlez le partage des photos via QR code. Aucune donnée n'est envoyée à un serveur distant ou à un tiers. Les photos non déverrouillées restent chiffrées et inaccessibles sans QR code."
+          },
+          {
+            "title": "4. Sécurité",
+            "content": "L'application intègre un système de protection contre les captures d'écran, une option pour empêcher le téléchargement d'images, et un accès progressif aux photos verrouillées."
+          },
+          {
+            "title": "5. Droits des utilisateurs",
+            "content": "Étant donné qu'aucune donnée n'est collectée ou stockée à distance, aucun traitement externe n'est effectué. Vous avez un contrôle total sur vos informations."
+          },
+          {
+            "title": "6. Modifications",
+            "content": "La politique de confidentialité peut être mise à jour à tout moment. La version la plus récente est disponible dans l'application."
+          }
+        ]
+      },
+      "security": {
+        "title": "Sécurité et Fonctionnement Technique",
+        "sections": [
+          {
+            "title": "Architecture de sécurité",
+            "items": [
+              "Chiffrement local : Utilisation d'un chiffrement avec clés générées localement",
+              "Isolation des données : Chaque album a son propre système de chiffrement",
+              "Protection d'écran : Empêche les captures d'écran sur les plateformes supportées",
+              "Contrôle d'accès : Seul l'appareil créateur peut exporter et partager ses albums"
+            ]
+          },
+          {
+            "title": "Limitations connues",
+            "items": [
+              "La protection contre les captures d'écran n'est pas garantie à 100%",
+              "Les données sont perdues en cas de désinstallation ou réinitialisation",
+              "Pas de synchronisation cloud : tout est stocké localement",
+              "L'application nécessite des permissions caméra pour scanner les QR codes"
+            ]
+          },
+          {
+            "title": "Responsabilités",
+            "items": [
+              "Utilisateur : Responsable du contenu partagé et de la sécurité de son appareil",
+              "Développeur : Fournit les outils de sécurité mais ne garantit pas une protection absolue",
+              "Plateforme : Les mesures de sécurité dépendent des capacités du système d'exploitation"
+            ]
+          }
+        ]
+      },
+      "footer": {
+        "contactMessage": "Pour toute question concernant ces documents légaux, veuillez nous contacter."
+      }
+    }
+  },
+  "en": {    "nav": {
+      "features": "Features",
+      "screenshots": "Screenshots",
+      "security": "Security",
+      "download": "Download",
+      "faq": "FAQ",
+      "contact": "Contact",
+      "homeAriaLabel": "Back to home",
+      "languageToggleAriaLabel": "Switch to",
+      "toggleMenuAriaLabel": "Toggle menu"
+    },"hero": {
+      "title": "DiscoverPicture – Share your memories treasure hunt style",
+      "subtitle": "Turn photo sharing into a fun and secure experience! Each photo unlocks with its secret QR code.",
+      "downloadButton": "Download app",
+      "availableOn": "Available on Android and iOS (coming soon)"
+    },    "features": {
+      "title": "Why choose DiscoverPicture?",
+      "subtitle": "A unique experience to share your most beautiful memories",
+      "items": [
+        {
+          "title": "Create your treasure hunts",
+          "description": "Turn every photo into a puzzle! Perfect for family games, birthdays, and special events."
+        },
+        {
+          "title": "Secure and fun sharing",
+          "description": "Your photos stay protected until the right person scans the right QR code. Like a digital safe!"
+        },
+        {
+          "title": "No internet needed",
+          "description": "Share your QR codes any way you want: print, message, email... No internet required to enjoy the experience."
+        },
+        {
+          "title": "Your memories, your rules",
+          "description": "Decide who can see what and when. Each photo has its own secret code that you control."
+        },
+        {
+          "title": "Protection for your private moments",
+          "description": "Your photos can't be copied or shared without your permission. Your memories truly stay yours."
+        },        {
+          "title": "Simple and intuitive",
+          "description": "Clear interface in French and English. Create your first album in just a few minutes."
+        }
+      ]
+    },    "screenshots": {
+      "title": "Discover the Interface",
+      "subtitle": "Explore DiscoverPicture's intuitive interface",
+      "items": [
+        {
+          "title": "Home",
+          "description": "Main interface with your album list and QR code scanner button"
+        },
+        {
+          "title": "Create album",
+          "description": "Easily create a new album by adding your favorite photos"
+        },
+        {
+          "title": "Unlocked album",
+          "description": "View your photos once unlocked with the corresponding QR codes"
+        },
+        {
+          "title": "Locked album",
+          "description": "Photos remain protected until you scan the right QR code"
+        }
+      ],
+      "modal": {
+        "viewLabel": "View"
+      }
+    },
+    "security": {
+      "title": "Your memories, safely kept",
+      "subtitle": "Share with peace of mind",
+      "description": "DiscoverPicture naturally protects your personal photos. Everything stays on your phone, nothing goes online. Only people with your QR codes can discover your photos, exactly as you intended.",
+      "features": [
+        "Your photos stay on your phone",
+        "No online storage",
+        "Screenshot protection",
+        "Complete control over your shares",
+        "Transparent and reliable app"
+      ]    },    "download": {
+      "title": "Download the App",
+      "subtitle": "Start your photo adventure now",      "android": {
+        "title": "Android",
+        "description": "Current version: 1.0.0",
+        "size": "34.5 MB",
+        "requirements": "Android 5.0 to latest",
+        "button": "Download APK"
+      },
+      "ios": {
+        "title": "iOS",
+        "description": "Current version: 1.0.0",
+        "size": "25-30 MB (estimated)",
+        "requirements": "iOS 12.0 to latest",
+        "status": "Coming soon to the App Store"
+      },
+      "notes": {
+        "manualInstall": "Manual installation required (APK)",
+        "allowUnknown": "Allow unknown sources in settings",
+        "appStoreSubmission": "Being submitted to the App Store",
+        "notifyMe": "Sign up to be notified",
+        "comingSoon": "Coming soon"
+      },
+      "instructions": {
+        "title": "Installation Instructions",
+        "steps": [
+          "Download the APK file",
+          "Allow installation from unknown sources",
+          "Open the downloaded APK file",
+          "Follow the installation instructions"
+        ]
+      },
+      "updates": {
+        "title": "Updates",
+        "description": "The app automatically checks for updates on startup. You'll be notified as soon as a new version is available."
+      },
+      "help": {
+        "title": "Need help?",
+        "description": "Check our FAQ or contact us directly for any installation questions."
+      },
+      "alerts": {
+        "downloadSoon": "Download will be available soon!"
+      }
+    },"faq": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "How does it actually work?",
+          "answer": "It's simple! Create an album with your photos, then share the generated QR codes. Each person scans their code to discover their surprise photo. Perfect for events, gifts, or family games."
+        },
+        {
+          "question": "What happens if I lose a QR code?",
+          "answer": "No worries! You can always view and share your QR codes again from the app. You always keep control over your albums."
+        },
+        {
+          "question": "Are my photos really private?",
+          "answer": "Absolutely! Your photos stay only on your phone. Only people with the right QR codes can discover the photos you've chosen to share."
+        },
+        {
+          "question": "Do I need internet to use the app?",
+          "answer": "Not at all! DiscoverPicture works entirely offline. You can create albums, scan codes, and discover photos even without a connection."
+        },
+        {
+          "question": "What occasions can I use DiscoverPicture for?",
+          "answer": "The possibilities are endless! Weddings, birthdays, family vacations, treasure hunts, personalized gifts, corporate events... Anywhere you want to create surprise and sharing."
+        }
+      ]
+    },    "about": {
+      "title": "Our mission",
+      "description": "DiscoverPicture was born from a simple desire: to make sharing memories more fun and personal. We believe every photo tells a story and deserves to be discovered in a special way. Our app turns your albums into real adventures to share!",      "contact": {
+        "title": "Got a question? An idea?",
+        "email": "max.allemeersch@gmail.com",
+        "description": "We love hearing from our users! Share your experiences, suggestions, or questions with us.",
+        "directContactTitle": "Direct contact",
+        "buttonText": "Send an email"
+      }
+    },
+    "contact": {
+      "form": {
+        "title": "Send us a message",
+        "name": "Name",
+        "namePlaceholder": "Your full name",
+        "email": "Email",
+        "emailPlaceholder": "your@email.com",
+        "subject": "Subject",
+        "subjectPlaceholder": "Choose a subject",
+        "subjectOptions": {
+          "bug": "Report a bug",
+          "feature": "Feature suggestion",
+          "help": "Help request",
+          "other": "Other"
+        },
+        "message": "Message",
+        "messagePlaceholder": "Describe your request or question...",
+        "sendButton": "Send message",
+        "alertMessage": "Contact form coming soon! Use email for now."
+      },
+      "developer": {
+        "title": "Developer",
+        "description": "DiscoverPicture is developed with passion to revolutionize photo sharing. This app combines security, innovation, and ease of use."
+      }
+    },    "footer": {
+      "copyright": "© 2025 DiscoverPicture. All rights reserved.",
+      "version": "Version 1.0.0",
+      "tagline": "Turn your memories into adventures",
+      "links": {
+        "github": "Source code",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service"
+      },
+      "sections": {
+        "app": {
+          "title": "Application",
+          "features": "Features",
+          "security": "Security",
+          "download": "Download",
+          "faq": "FAQ"
+        },
+        "support": {
+          "title": "Support",
+          "contact": "Contact",
+          "faq": "Frequently Asked Questions",
+          "technicalSupport": "Technical Support"
+        },
+        "legal": {
+          "title": "Legal"
+        },
+        "development": {
+          "title": "Development"
+        }
+      },
+      "badges": {
+        "availableOn": "Available on",
+        "comingSoonOn": "Coming soon on",
+        "android": "Android",
+        "ios": "iOS"
+      },
+      "alerts": {
+        "privacyNotImplemented": "Privacy Policy - To be implemented",
+        "termsNotImplemented": "Terms of Service - To be implemented"
+      }
+    },    "legal": {
+      "terms": {
+        "title": "Terms of Service - DiscoverPicture",
+        "lastUpdated": "Last updated: June 19, 2025",
+        "version": "Version: 1.0.0",
+        "sections": [
+          {
+            "title": "1. Acceptance",
+            "content": "By using the DiscoverPicture application, you accept these terms of service. If you disagree, please do not use the application."
+          },
+          {
+            "title": "2. General Operation",
+            "content": "DiscoverPicture is a mobile application designed to share photos privately and playfully. Each photo is encrypted and can only be unlocked via a specific QR code. The application works without an Internet connection. All data is stored locally on the device."
+          },
+          {
+            "title": "3. User Responsibility",
+            "content": "You are solely responsible for the content you import, create, or share with other users via QR codes. The application cannot restore lost data or interfere with exchanges between users."
+          },
+          {
+            "title": "4. Technical Limitations",
+            "content": "If you delete or reinstall the application, local data may be lost. Screenshot protection is active but does not guarantee absolute security."
+          },
+          {
+            "title": "5. Intellectual Property",
+            "content": "The application, its name, logo, and interface are protected by copyright. You may not copy, modify, or redistribute the application without authorization."
+          },
+          {
+            "title": "6. Modifications",
+            "content": "Terms may be updated at any time. The most recent version will be available in the application."
+          }
+        ]
+      },
+      "privacy": {
+        "title": "Privacy Policy - DiscoverPicture",
+        "lastUpdated": "Last updated: June 19, 2025",
+        "version": "Version: 1.0.0",
+        "sections": [
+          {
+            "title": "1. Data Collection",
+            "content": "DiscoverPicture does not collect any personal data. The application works entirely offline. No information leaves your device."
+          },
+          {
+            "title": "2. Locally Stored Data",
+            "content": "The application only stores: your albums, photos and QR codes, as well as your preferences (language, theme, etc.). All data is encrypted locally using a lightweight encryption method."
+          },
+          {
+            "title": "3. Data Sharing",
+            "content": "Only you control photo sharing via QR code. No data is sent to a remote server or third party. Unlocked photos remain encrypted and inaccessible without a QR code."
+          },
+          {
+            "title": "4. Security",
+            "content": "The application integrates a screenshot protection system, an option to prevent image downloading, and progressive access to locked photos."
+          },
+          {
+            "title": "5. User Rights",
+            "content": "Since no data is collected or stored remotely, no external processing is performed. You have complete control over your information."
+          },
+          {
+            "title": "6. Modifications",
+            "content": "The privacy policy may be updated at any time. The most recent version is available in the application."
+          }
+        ]
+      },
+      "security": {
+        "title": "Security and Technical Operation",
+        "sections": [
+          {
+            "title": "Security Architecture",
+            "items": [
+              "Local encryption: Use of encryption with locally generated keys",
+              "Data isolation: Each album has its own encryption system",
+              "Screen protection: Prevents screenshots on supported platforms",
+              "Access control: Only the creator device can export and share its albums"
+            ]
+          },
+          {
+            "title": "Known Limitations",
+            "items": [
+              "Screenshot protection is not 100% guaranteed",
+              "Data is lost in case of uninstallation or reset",
+              "No cloud synchronization: everything is stored locally",
+              "The application requires camera permissions to scan QR codes"
+            ]
+          },
+          {
+            "title": "Responsibilities",
+            "items": [
+              "User: Responsible for shared content and device security",
+              "Developer: Provides security tools but does not guarantee absolute protection",
+              "Platform: Security measures depend on operating system capabilities"
+            ]
+          }
+        ]
+      },
+      "footer": {
+        "contactMessage": "For any questions regarding these legal documents, please contact us."
+      }
+    }
+  }
+}
